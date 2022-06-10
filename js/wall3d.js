@@ -8,11 +8,13 @@
 
     function resizeHandler() {
         maxScrollValue = document.body.offsetHeight - window.innerHeight;
+
     }
 
     window.addEventListener('scroll', function () {
         const scrollPer = pageYOffset / maxScrollValue;
-        const zMove = scrollPer * 200 - 100;
+        const zMove = scrollPer* 200 - 100;
+        // const zMove = scrollPer * 200 - 100;
         houseElem.style.transform = 'translateZ(' + zMove + 'vw)';
         console.log('zMove?;'+zMove)
 
@@ -28,12 +30,12 @@
 
     window.addEventListener('resize', resizeHandler);
 
-    // stageElem.addEventListener('click', function (e) {
-    //     new Character({
-    //         xPos: e.clientX / window.innerWidth * 100,
-    //         speed: Math.random() * 0.5 + 0.2
-    //     });
-    // });
+    stageElem.addEventListener('click', function (e) {
+        new Character({
+            xPos: e.clientX / window.innerWidth * 100,
+            speed: Math.random() * 0.5 + 0.2
+        });
+    });
 
     // selectCharacterElem.addEventListener('click', function (e) {
     //     const value = e.target.getAttribute('data-char');
