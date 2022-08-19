@@ -62,27 +62,59 @@ body {
 }
 
 
-.wall-content {
+/* .wall-content {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-}
+} */
 
-/* .wall-front-s { transform: translateZ(100vw); } */
 .wall-front-a { transform: translateZ(100vw); }
 .wall-front-b { transform: translateZ(-100vw); }
+
+/* .wall-front-a { transform: translateZ(0vw); }
+.wall-front-b { transform: translateZ(-200vw); } */
+
 
 /* characters */
 .character {
     position: absolute;
-    left: 12%;
+    left: 0%;
     bottom: 5%;
     width: 10vw;
     height: 15.58vw;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     transform: translateZ(-100vw);
 }
+
+.fifty {
+  position: absolute;
+  left: 0%;
+  bottom: 5%;
+  width: 10vw;
+  height: 15.58vw;
+  color: red;
+  transform: translateZ(-50vw);
+  /* transform-style: preserve-3d; */
+}
+
+.ten {
+  position: absolute;
+  left: 0%;
+  bottom: 5%;
+  width: 10vw;
+  height: 15.58vw;
+  transform: translateZ(-10vw);
+}
+.zero {
+  position: absolute;
+  left: 0%;
+  bottom: 5%;
+  width: 10vw;
+  height: 15.58vw;
+  transform: translateZ(0vw);
+}
+
 .character[data-direction='forward'] { transform: rotateY(180deg); }
 .character[data-direction='backward'] { transform: rotateY(0deg); }
 .character[data-direction='left'] { transform: rotateY(-90deg); }
